@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body>
+  <body class="dark-theme">
     <header class="site-header">
       <div class="container">
         <a href="index.html" class="site-header__logo">
@@ -39,13 +39,22 @@
     <main>
       <section class="colorcast-intro">
         <div class="container">
-          <h1 class="colorcast-title">
+          <h1 class="colorcast-header">colorcast</h1>
+          <h2 class="colorcast-title">
             The universe has spoken (in hex codes).
-          </h1>
+          </h2>
           <p class="colorcast-paragraph">
             Get today’s fortune and a custom palette to match your fate. Like a
             horoscope, but you can use it in Figma.
           </p>
+          <button class="colorcast-generate">
+            <img src="assets/svg/btn-generate-icon.svg" class="btn-icon-left" />
+            <span>Reveal my fortune</span>
+            <img
+              src="assets/svg/btn-generate-icon.svg"
+              class="btn-icon-right"
+            />
+          </button>
         </div>
       </section>
     </main>

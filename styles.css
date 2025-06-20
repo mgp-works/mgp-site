@@ -2,7 +2,17 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
   font-family: "Figtree";
   font-size: 16px;
   line-height: 1.6;
@@ -11,6 +21,16 @@ body {
   font-weight: 500;
   padding: 0;
   margin: 0;
+}
+
+body.dark-theme {
+  background-color: #000;
+  color: #E1E1E1;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 40px;
 }
 
 a {
@@ -62,7 +82,6 @@ ul {
 }
 
 
-
 /* Navigation */
 
 .nav-list {
@@ -89,6 +108,10 @@ ul {
   transition: opacity 0.2s ease-out;
 }
 
+body.dark-theme .nav-list a::after {
+  background-color: #E1E1E1;
+}
+
 .nav-list a:hover::after {
   opacity: 1;
 }
@@ -96,7 +119,6 @@ ul {
 .nav-list a.active::after {
   opacity: 1;
 }
-
 
 
 /* Hero */
@@ -111,7 +133,6 @@ ul {
   font-size: 32px;
   line-height: 1.2;
 }
-
 
 
 /* Work Grid */
@@ -175,16 +196,19 @@ ul {
 }
 
 
-
 /* CC */
 
 .colorcast-intro {
-  display: flex;             
+  display: flex;
   flex-direction: column;    
   align-items: center;       
   justify-content: center;    
   text-align: center;
-  padding: 60px 0; 
+  padding: 60px 0;
+}
+
+.colorcast-header {
+  font-size: 80px;
 }
 
 .colorcast-title {
@@ -195,18 +219,63 @@ ul {
 }
 
 .colorcast-paragraph {
-  font-size: 12px;
+  width: 400px;
+  margin: 0 auto;
+  font-size: 14px;
   font-weight: 200;
   color: gray;
   line-height: 1.6;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 16px;
 }
+
+.colorcast-generate {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  color: #1E1E1E;
+  box-shadow: 
+    inset 0 1px 0 0 #f4f4f4,
+    0 1px 0 0 #e5e5e5,
+    0 2px 0 0 #d8d8d8,
+    0 4px 0 0 #dbdbdb,
+    0 5px 0 0 #dedede,
+    0 6px 0 0 #dcdcdc,
+    0 7px 0 0 #cacaca,
+    0 7px 8px 0 #cecece;
+  padding: 12px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 12px;
+  margin-top: 40px;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.colorcast-generate:hover {
+  transform: translateY(4px);
+  box-shadow: 
+    inset 0 1px 0 0 #f4f4f4,
+    0 1px 0 0 #e5e5e5,
+    0 2px 0 0 #d8d8d8,
+    0 4px 0 0 #dbdbdb,
+    0 5px 0 0 #dedede,
+    0 6px 0 0 #dcdcdc,
+    0 7px 0 0 #cacaca,
+    0 7px 8px 0 #cecece;
+}
+
+.btn-icon-right {
+  transform: scaleX(-1)
+}
+
 
 /* Footer */
 
 footer {
   font-size: 14px;
   color: gray;
- margin-bottom: 16px;
+  padding-bottom: 20px;
 }
