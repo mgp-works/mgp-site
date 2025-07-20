@@ -48,7 +48,7 @@
             Get today’s fortune and a custom palette to match your fate. Like a
             horoscope, but you can use it in Figma.
           </p>
-          <button class="colorcast-generate">
+          <button id="generate-button" class="colorcast-generate">
             <img src="assets/svg/btn-generate-icon.svg" class="btn-icon-left" />
             <span>Reveal my fortune</span>
             <img
@@ -56,6 +56,11 @@
               class="btn-icon-right"
             />
           </button>
+          <div id="result" style="display: none">
+            <p id="fortuneKR" class="fortune-kr"></p>
+            <p id="fortuneEN" class="fortune-en"></p>
+            <div id="colors" class="color-palette"></div>
+          </div>
         </div>
       </section>
     </main>
@@ -64,5 +69,6 @@
         <p>min-gyo park © 2025 — powered by carbs and curiosity.</p>
       </div>
     </footer>
+    <script src="js/colorcast.js"></script>
   </body>
 </html>
