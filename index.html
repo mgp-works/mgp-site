@@ -5,107 +5,218 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Min-Gyo Park - mgp.works</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&display=swap"
-    />
     <link rel="stylesheet" href="styles.css" />
+
     <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+
+    <script type="module" src="js/components/site-header.js"></script>
+    <script type="module" src="js/components/site-footer.js"></script>
+    <script type="module" src="js/components/project-card.js"></script>
   </head>
 
   <body>
-    <header class="site-header">
-      <div class="container">
-        <a href="index.html" class="site-header__logo">
-          <img src="assets/images/myface.svg" alt="logo image" width="40" />
-          <span class="site-header__logo-name">min-gyo park</span>
-        </a>
-
-        <nav>
-          <ul class="nav-list">
-            <li><a href="index.html" class="active">works</a></li>
-            <li><a href="colorcast.html">colorcast</a></li>
-            <li><a href="about.html">about</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <site-header></site-header>
 
     <main>
-      <section class="hero">
-        <div class="container">
-          <h1 class="hero-title">
-            Seoul-based designer, obsessed with coherence, structure, and the
-            way things work.
-          </h1>
+      <section class="hero page">
+        <p class="hero-title col-span-2">overview</p>
+
+        <h1 class="hero-text col-span-6 headline-md">
+          Product designer based in Seoul, focused on coherence, structure, and
+          how things work.
+        </h1>
+      </section>
+
+      <img
+        class="hero-img bleed"
+        src="assets/images/home-hero.png"
+        alt="images"
+      />
+
+      <section class="home-works">
+        <div class="home-works__top page">
+          <h2 class="home-works__title col-span-2 headline-md">works</h2>
+
+          <div class="home-works__detail col-span-6">
+            <p class="home-works__txt body-md">
+              a selection of recent projects
+            </p>
+            <a class="home-works__btn label-md" href="works.html">view more</a>
+          </div>
+        </div>
+
+        <div class="home-works__cards page">
+          <div class="col-span-2"></div>
+          <project-card
+            class="col-span-2"
+            src="assets/images/home/home-prelude.png"
+            alt="Project Image"
+            title="Avocado"
+            type="(UI/UX)"
+            year="2025"
+          >
+          </project-card>
+
+          <project-card
+            class="col-span-2"
+            src="assets/images/home/home-blitz.png"
+            alt="Project Image"
+            title="Blitz"
+            type="(UI/UX)"
+            year="2025"
+          >
+          </project-card>
+
+          <project-card
+            class="col-span-2"
+            src="assets/images/home/home-encrebel.png"
+            alt="Project Image"
+            title="Carrot"
+            type="(UI/UX)"
+            year="2023"
+          >
+          </project-card>
         </div>
       </section>
 
-      <section class="work-grid">
-        <div class="work-item">
-          <a href="project1.html" class="project1">
-            <img
-              src="assets/images/project-image.png"
-              alt="Project1 Thumbnail"
-            />
-            <div class="work-meta">
-              <span class="work-title">Project1</span>
-              <span class="work-type">UI/UX</span>
-              <span class="work-year">2025</span>
-            </div>
-          </a>
+      <section class="home-colorcast">
+        <div class="home-colorcast__left page">
+          <h2 class="home-colorcast__title col-span-2 headline-md">
+            colorcast
+          </h2>
+
+          <div class="home-colorcast__detail col-span-6">
+            <p class="home-colorcast__txt body-md">
+              a fun personal project that gives you a fortune and matching color
+              palettes.
+            </p>
+            <a class="home-colorcast__btn label-md" href="colorcast.html"
+              >try now</a
+            >
+          </div>
         </div>
-        <div class="work-item">
-          <a href="project2.html" class="project2">
-            <img
-              src="assets/images/project-image.png"
-              alt="Project2 Thumbnail"
-            />
-            <div class="work-meta">
-              <span class="work-title">Project2</span>
-              <span class="work-type">UI/UX</span>
-              <span class="work-year">2025</span>
-            </div>
-          </a>
-        </div>
-        <div class="work-item">
-          <a href="project3.html" class="project3">
-            <img
-              src="assets/images/project-image.png"
-              alt="Project3 Thumbnail"
-            />
-            <div class="work-meta">
-              <span class="work-title">Project3</span>
-              <span class="work-type">UI/UX</span>
-              <span class="work-year">2023</span>
-            </div>
-          </a>
-        </div>
-        <div class="work-item">
-          <a href="project4.html" class="project4">
-            <img
-              src="assets/images/project-image.png"
-              alt="Project4 Thumbnail"
-            />
-            <div class="work-meta">
-              <span class="work-title">Project4</span>
-              <span class="work-type">Branding</span>
-              <span class="work-year">2022</span>
-            </div>
-          </a>
+
+        <div class="page">
+          <div class="col-span-2"></div>
+          <img
+            class="home-colorcast__img col-span-4"
+            src="assets/images/home/home-cc.svg"
+            alt="Colorcast Image"
+          />
+          <img
+            class="home-colorcast__img col-span-2"
+            src="assets/images/home/home-cc-logo.png"
+            alt="Colorcast Image"
+          />
         </div>
       </section>
+
+      <!-- <section class="home-feed">
+        <div class="home-feed__top page">
+          <h2 class="home-feed__title col-span-2 headline-md">feed</h2>
+
+          <div class="home-feed__detail col-span-6">
+            <p class="home-feed__txt headline-md">
+              anything I’ve created or things that inspire me
+            </p>
+            <a class="home-feed__btn label-md" href="feed.html">view more</a>
+          </div>
+        </div>
+
+        <div class="auto-scroll-wrapper">
+          <div class="auto-scroll-track">
+            <div class="feed-item">
+              <img src="assets/images/feed/doodle3.JPG" alt="Feed Image" />
+              <p class="caption-md">Sketch</p>
+            </div>
+            <div class="feed-item">
+              <img src="assets/images/feed/doodle6.png" alt="Feed Image" />
+              <p class="caption-md">Pixel art of my bunnies</p>
+            </div>
+            <div class="feed-item">
+              <img src="assets/images/feed/morningwalk1.png" alt="Feed Image" />
+              <p class="caption-md">Taken on a morning walk</p>
+            </div>
+            <div class="feed-item">
+              <img src="assets/images/feed/doodle5.JPG" alt="Feed Image" />
+              <p class="caption-md">Sketch</p>
+            </div>
+            <div class="feed-item">
+              <img src="assets/images/feed/acnh.JPG" alt="Feed Image" />
+              <p class="caption-md">I make my own Animal Crossing outfit</p>
+            </div>
+            <div class="feed-item">
+              <img
+                src="assets/images/feed/preludemotion.gif"
+                alt="Feed Image"
+              />
+              <p class="caption-md">Motion Graphic for Prelude</p>
+            </div>
+            <div class="feed-item">
+              <img src="assets/images/feed/doodle1.JPG" alt="Feed Image" />
+              <p>Sketch</p>
+            </div>
+            <div class="feed-item">
+              <img src="assets/images/feed/doodle4.JPG" alt="Feed Image" />
+              <p>Sketch</p>
+            </div>
+
+
+            <div class="feed-item">
+              <img src="assets/images/feed/doodle3.JPG" alt="Feed Image" />
+              <p class="caption-md">Sketch</p>
+            </div>
+            <div class="feed-item">
+              <img src="assets/images/feed/doodle6.png" alt="Feed Image" />
+              <p class="caption-md">Pixel art of my bunnies</p>
+            </div>
+            <div class="feed-item">
+              <img src="assets/images/feed/morningwalk1.png" alt="Feed Image" />
+              <p class="caption-md">Taken on a morning walk</p>
+            </div>
+            <div class="feed-item">
+              <img src="assets/images/feed/doodle5.JPG" alt="Feed Image" />
+              <p class="caption-md">Sketch</p>
+            </div>
+            <div class="feed-item">
+              <img src="assets/images/feed/acnh.JPG" alt="Feed Image" />
+              <p class="caption-md">I make my own Animal Crossing outfit</p>
+            </div>
+            <div class="feed-item">
+              <img
+                src="assets/images/feed/preludemotion.gif"
+                alt="Feed Image"
+              />
+              <p class="caption-md">Motion Graphic for Prelude</p>
+            </div>
+            <div class="feed-item">
+              <img src="assets/images/feed/doodle1.JPG" alt="Feed Image" />
+              <p>Sketch</p>
+            </div>
+            <div class="feed-item">
+              <img src="assets/images/feed/doodle4.JPG" alt="Feed Image" />
+              <p>Sketch</p>
+            </div>
+          </div>
+        </div>
+      </section> -->
     </main>
-    <footer>
-      <div class="container">
-        <p>min-gyo park © 2025 — powered by carbs and curiosity.</p>
-      </div>
-    </footer>
+    <site-footer></site-footer>
   </body>
 </html>
