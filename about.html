@@ -5,74 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Min-Gyo Park - mgp.works</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&display=swap"
-    />
     <link rel="stylesheet" href="styles.css" />
+
     <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+
+    <script type="module" src="js/components/site-header.js"></script>
+    <script type="module" src="js/components/site-footer.js"></script>
+    <script type="module" src="js/components/project-card.js"></script>
+    <script type="module" src="js/scroll-reveal.js"></script>
   </head>
 
   <body>
-    <header class="site-header">
-      <div class="container">
-        <a href="index.html" class="site-header__logo">
-          <img
-            src="assets/images/myface.svg"
-            alt="logo of Min-Gyo Park"
-            width="40"
-            height="40"
-          />
-          <span class="site-header__logo-name">min-gyo park</span>
-        </a>
-
-        <nav>
-          <ul class="nav-list">
-            <li><a href="index.html"> works</a></li>
-            <li><a href="colorcast.html">colorcast</a></li>
-            <li><a href="about.html" class="active">about</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <site-header></site-header>
 
     <main>
-      <section class="intro">
-        <div class="container">
-          <!-- <img
-            src="assets/images/mewalking.png"
-            alt="image of me"
-            width="100"
-          /> -->
+      <div class="container">
+        <section class="hero-about">
+          <h1 class="hero-about__title display-lg">about</h1>
+          <div class="hero-about__texts">
+            <p class="hero-about__text body-md">test</p>
+          </div>
 
-          <!-- <div class="icon-buttons">
-            <a href="mailto:mg@mgp.works" class="icon-button">
-              <img src="assets/icons/mail.svg" alt="Email Icon" />
-              <span>email me</span>
+          <section class="about-buttons label-md">
+            <a
+              class="btn"
+              href="mailto:mg@mgp.works?subject=Hello%20Min-Gyo&body=Hi%20Min-Gyo,%0D%0A"
+            >
+              <span>E-mail</span>
+              <img
+                src="assets/svg/arrow-right-up.svg"
+                class="btn-icon-arrow"
+                width="16"
+              />
             </a>
 
             <a
-              href="https://linkedin.com/in/mgpworks"
+              class="btn"
+              href="https://www.linkedin.com/in/mgpworks"
               target="_blank"
-              class="icon-button"
+              rel="noopener"
             >
-              <img src="assets/icons/linkedin.svg" alt="LinkedIn Icon" />
-              <span>linkedin</span>
+              <span>LinkedIn</span>
+              <img
+                src="assets/svg/arrow-right-up.svg"
+                class="btn-icon-arrow"
+                width="16"
+              />
             </a>
-          </div> -->
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="container">
-        <p>min-gyo park © 2025 — powered by carbs and curiosity.</p>
+
+            <a
+              class="btn"
+              href="https://github.com/mgp-works"
+              target="_blank"
+              rel="noopener"
+            >
+              <span>GitHub</span>
+              <img
+                src="assets/svg/arrow-right-up.svg"
+                class="btn-icon-arrow"
+                width="16"
+              />
+            </a>
+          </section>
+        </section>
       </div>
-    </footer>
+    </main>
+    <site-footer></site-footer>
   </body>
 </html>

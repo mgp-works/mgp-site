@@ -5,57 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Min-Gyo Park - mgp.works</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="image" href="assets/images/colorcast-bg.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&display=swap"
-    />
     <link rel="stylesheet" href="styles.css" />
+
     <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+
+    <script type="module" src="js/components/site-header.js"></script>
+    <script type="module" src="js/components/site-footer.js"></script>
+    <script type="module" src="js/components/project-card.js"></script>
   </head>
 
-  <body class="dark-theme">
-    <header class="site-header">
-      <div class="container">
-        <a href="index.html" class="site-header__logo">
-          <img src="assets/images/myface.svg" alt="logo image" width="40" />
-          <span class="site-header__logo-name">min-gyo park</span>
-        </a>
-
-        <nav>
-          <ul class="nav-list">
-            <li><a href="index.html">works</a></li>
-            <li><a href="colorcast.html" class="active">colorcast</a></li>
-            <li><a href="about.html">about</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+  <body class="colorcast-page">
+    <site-header></site-header>
 
     <main>
-      <section class="colorcast-intro">
+      <section class="colorcast-hero">
         <div class="container">
-          <h1 class="colorcast-header">colorcast</h1>
-          <h2 class="colorcast-title">
+          <img
+            src="assets/svg/cc-star-lg.svg"
+            class="colorcast-star-lg"
+            width="40px"
+          />
+          <h1 class="colorcast-header display-lg">colorcast</h1>
+          <h2 class="colorcast-title headline-md">
             The universe has spoken (in hex codes).
           </h2>
-          <p class="colorcast-paragraph">
+          <p class="colorcast-paragraph body-md">
             Get today’s fortune and a custom palette to match your fate. Like a
             horoscope, but you can use it in Figma.
           </p>
-          <button id="generate-button" class="colorcast-generate">
-            <img src="assets/svg/btn-generate-icon.svg" class="btn-icon-left" />
+
+          <button id="generate-button" class="colorcast-btn">
+            <img src="assets/svg/emphasize.svg" class="btn-icon-left" />
             <span>Reveal my fortune</span>
-            <img
-              src="assets/svg/btn-generate-icon.svg"
-              class="btn-icon-right"
-            />
+            <img src="assets/svg/emphasize.svg" class="btn-icon-right" />
           </button>
+
           <div id="result" style="display: none">
             <p id="fortuneKR" class="fortune-kr"></p>
             <p id="fortuneEN" class="fortune-en"></p>
@@ -64,11 +65,8 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div class="container">
-        <p>min-gyo park © 2025 — powered by carbs and curiosity.</p>
-      </div>
-    </footer>
+
+    <site-footer></site-footer>
     <script src="js/colorcast.js"></script>
   </body>
 </html>
