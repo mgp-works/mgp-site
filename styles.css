@@ -187,9 +187,8 @@ main {
 .col-span-7 { grid-column: span 7 / span 7; }
 .col-span-8 { grid-column: span 8 / span 8; }
 
-/* Full-bleed utility */
-.bleed {
-  grid-column: 1 / -1;
+.to-right-edge {
+  margin-right: calc(var(--margin) * -1);
 }
 
 /* ========== RESPONSIVE BREAKPOINTS ========== */
@@ -222,37 +221,6 @@ main {
     margin-block: 56px;
   }
 }
-
-/* ========== HEADER ========== */
-
-.site-header {
-  margin-top: 20px;
-  align-items: center;
-}
-
-.nav {
-  display: flex;
-  gap: 20px;
-  white-space: nowrap;
-}
-
-.nav-link {
-  color: var(--gray-400);
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: var(--gray-700);
-}
-
-.nav-link.active {
-  color: var(--gray-800);
-}
-
-.logo {
-  justify-self: end;
-}
-
 
 /* Mobile Nav */
 .mobile-nav {
@@ -309,18 +277,56 @@ main {
   }
 } */
 
+/* ========== HEADER ========== */
+
+.site-header {
+  margin-top: 20px;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+.nav-link {
+  color: var(--gray-400);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--gray-700);
+}
+
+.nav-link.active {
+  color: var(--gray-800);
+}
+
+.logo {
+  justify-self: end;
+}
 
 /* ========== HOME ========== */
 
 .hero {
   margin-top: 200px;
-  margin-bottom: 80px;
+  margin-bottom: 160px;
 }
 
-.hero-img {
-  display: block;     /* removes little inline whitespace */
-  width: 100%;        /* fit its parent container */
-  height: auto;       /* keep aspect ratio */
+.home-divider {
+  grid-column: 3 / -1;
+  height: 0.5px;
+  background: var(--gray-800);
+  margin-bottom: 56px;
+}
+
+.home-txt-btn {
+  color: var(--gray-500);
+}
+
+.home-txt-btn:hover {
+  color: var(--gray-800);
 }
 
 /* ========== HOME-WORKS ========== */
@@ -334,16 +340,15 @@ main {
 }
 
 .home-works__txt {
-  margin-bottom: 4px;
+  margin-bottom: 12px;
 }
 
 .home-works__cards {
-  margin-top: 24px;
+  margin-top: 40px;
 }
 
 project-card img {
   width: 100%;
-  aspect-ratio: 3 / 4;
   object-fit: cover;
   display: block;
 }
@@ -384,118 +389,30 @@ project-card img {
 }
 
 .home-colorcast__txt {
-  margin-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+.home-colorcast__imgs {
+  margin-top: 40px;
 }
 
 .home-colorcast__img {
-  margin-top: 24px;
   width: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* ========== HOME-FEED ========== */
+/* ========== HOME-ABOUT ========== */
 
-.home-feed {
+.home-about {
   margin-top: 120px;
 }
 
-.home-feed__detail {
-  /* margin-top: 8px; */
-}
-
-.home-feed__txt {
-  margin-bottom: 4px;
-  color: var(--gray-400);
-}
-
-.home-feed__cards {
+.home-about__btns {
   margin-top: 60px;
-}
-
-/* ========== HOME-FEED-SCROLL ========== */
-
-.auto-scroll-wrapper {
-  margin-top: 40px;
-  overflow: hidden;
-  width: 100%;
-}
-
-.auto-scroll-track {
-  display: flex;
-  width: max-content;
-  gap: 12px;
-  animation: scroll-left 20s linear infinite;
-}
-
-.feed-item {
-  display: flex;
-  flex-direction: column;
-  width: 280px;
-  flex-shrink: 0;
-}
-
-.feed-item img {
-  width: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.feed-item p {
-  margin-top: 4px;
-  color: var(--gray-400);
-  text-align: start;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* ========== ABOUT ========== */
-
-.about-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 20px;
-  grid-column: 2/4;
-}
-
-.about-buttons a {
-  all: unset;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-
-  padding: 8px 10px 8px 14px;
-  border-radius: 12px;
-  border: none;
-  background-color: var(--gray-200);
-  color: var(--gray-700);
-  cursor: pointer;
-
-  transition: transform .15s ease, background-color .15s ease;
-}
-
-.about-buttons a:hover {
-  background-color: var(--gray-300);
-  transform: translateY(1px);
-}
-
-.about-buttons a:active {
-  background-color: var(--gray-800);
-  color: var(--gray-100);
-  transform: translateY(4px);
-  transition: transform .15s ease, background-color .15s ease;
-}
-
-.about-buttons a:active .btn-icon-arrow {
-  filter: invert(1);
+  gap: 32px;
 }
 
 /* ========== COLORCAST ========== */

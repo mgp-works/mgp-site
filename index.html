@@ -34,38 +34,34 @@
     <site-header></site-header>
 
     <main>
-      <section class="hero page">
-        <p class="hero-title col-span-2">overview</p>
+      <!-------------------- HOME-HERO -------------------->
 
-        <h1 class="hero-text col-span-6 headline-md">
-          Product designer based in Seoul, focused on coherence, structure, and
-          how things work.
-        </h1>
+      <section class="hero page">
+        <div class="col-span-2"></div>
+        <h1 class="hero-text col-span-6 headline-md">Test!</h1>
       </section>
 
-      <img
-        class="hero-img bleed"
-        src="assets/images/home-hero.png"
-        alt="images"
-      />
+      <!-------------------- HOME-WORKS -------------------->
 
       <section class="home-works">
         <div class="home-works__top page">
+          <div class="col-span-2"></div>
+          <div class="home-divider to-right-edge"></div>
+
           <h2 class="home-works__title col-span-2 headline-md">works</h2>
 
-          <div class="home-works__detail col-span-6">
+          <div class="home-works__detail col-span-2">
             <p class="home-works__txt body-md">
-              a selection of recent projects
+              a selection of recent projects from product design to branding.
             </p>
-            <a class="home-works__btn label-md" href="works.html">view more</a>
+            <a class="home-txt-btn label-md" href="works.html">view more</a>
           </div>
         </div>
 
         <div class="home-works__cards page">
-          <div class="col-span-2"></div>
           <project-card
-            class="col-span-2"
-            src="assets/images/home/home-prelude.png"
+            class="col-span-4"
+            src="assets/images/work-prelude.png"
             alt="Project Image"
             title="Prelude"
             type="(UI/UX)"
@@ -74,143 +70,88 @@
           </project-card>
 
           <project-card
-            class="col-span-2"
-            src="assets/images/home/home-blitz.png"
+            class="col-span-4"
+            src="assets/images/work-blitz.png"
             alt="Project Image"
             title="Blitz"
             type="(UI/UX)"
             year="2025"
           >
           </project-card>
-
-          <project-card
-            class="col-span-2"
-            src="assets/images/home/home-encrebel.png"
-            alt="Project Image"
-            title="Encrebel"
-            type="(UI/UX)"
-            year="2023"
-          >
-          </project-card>
         </div>
       </section>
 
+      <!-------------------- HOME-COLORCAST -------------------->
+
       <section class="home-colorcast">
-        <div class="home-colorcast__left page">
+        <div class="home-colorcast__top page">
+          <div class="col-span-2"></div>
+          <div class="home-divider to-right-edge"></div>
+
           <h2 class="home-colorcast__title col-span-2 headline-md">
             colorcast
           </h2>
 
-          <div class="home-colorcast__detail col-span-6">
+          <div class="home-colorcast__detail col-span-2">
             <p class="home-colorcast__txt body-md">
               a fun personal project that gives you a fortune and matching color
               palettes.
             </p>
-            <a class="home-colorcast__btn label-md" href="colorcast.html"
-              >try now</a
-            >
+            <a class="home-txt-btn label-md" href="colorcast.html">try now</a>
           </div>
         </div>
 
-        <div class="page">
-          <div class="col-span-2"></div>
+        <div class="home-colorcast__imgs page">
           <img
             class="home-colorcast__img col-span-4"
-            src="assets/images/home/home-cc.svg"
+            src="assets/images/home-cc.png"
             alt="Colorcast Image"
           />
           <img
-            class="home-colorcast__img col-span-2"
-            src="assets/images/home/home-cc-logo.png"
+            class="home-colorcast__img col-span-4"
+            src="assets/images/home-cc-logo.png"
             alt="Colorcast Image"
           />
         </div>
       </section>
 
-      <section class="home-feed">
-        <div class="home-feed__top page">
-          <h2 class="home-feed__title col-span-2 headline-md">feed</h2>
+      <!-------------------- HOME-ABOUT -------------------->
 
-          <div class="home-feed__detail col-span-6">
-            <p class="home-feed__txt headline-md">
-              anything I’ve created or things that inspire me
+      <section class="home-about">
+        <div class="home-about__top page">
+          <div class="col-span-2"></div>
+          <div class="home-divider to-right-edge"></div>
+
+          <h2 class="home-about__title col-span-2 headline-md">about</h2>
+
+          <div class="home-about__detail col-span-6">
+            <p class="home-about__txt headline-sm">
+              Product Designer focused on uncovering user needs and turning them
+              into solutions. With a background in branding and a sharp eye for
+              detail, I create systems with a consistent design language that
+              reduce friction and add visual polish.
             </p>
-            <a class="home-feed__btn label-md" href="feed.html">view more</a>
-          </div>
-        </div>
 
-        <div class="auto-scroll-wrapper">
-          <div class="auto-scroll-track">
-            <div class="feed-item">
-              <img src="assets/images/feed/doodle3.JPG" alt="Feed Image" />
-              <p class="caption-md">Sketch</p>
-            </div>
-            <div class="feed-item">
-              <img src="assets/images/feed/doodle6.png" alt="Feed Image" />
-              <p class="caption-md">Pixel art of my bunnies</p>
-            </div>
-            <div class="feed-item">
-              <img src="assets/images/feed/morningwalk1.png" alt="Feed Image" />
-              <p class="caption-md">Taken on a morning walk</p>
-            </div>
-            <div class="feed-item">
-              <img src="assets/images/feed/doodle5.JPG" alt="Feed Image" />
-              <p class="caption-md">Sketch</p>
-            </div>
-            <div class="feed-item">
-              <img src="assets/images/feed/acnh.JPG" alt="Feed Image" />
-              <p class="caption-md">I make my own Animal Crossing outfit</p>
-            </div>
-            <div class="feed-item">
-              <img
-                src="assets/images/feed/preludemotion.gif"
-                alt="Feed Image"
-              />
-              <p class="caption-md">Motion Graphic for Prelude</p>
-            </div>
-            <div class="feed-item">
-              <img src="assets/images/feed/doodle1.JPG" alt="Feed Image" />
-              <p>Sketch</p>
-            </div>
-            <div class="feed-item">
-              <img src="assets/images/feed/doodle4.JPG" alt="Feed Image" />
-              <p>Sketch</p>
-            </div>
-
-            <div class="feed-item">
-              <img src="assets/images/feed/doodle3.JPG" alt="Feed Image" />
-              <p class="caption-md">Sketch</p>
-            </div>
-            <div class="feed-item">
-              <img src="assets/images/feed/doodle6.png" alt="Feed Image" />
-              <p class="caption-md">Pixel art of my bunnies</p>
-            </div>
-            <div class="feed-item">
-              <img src="assets/images/feed/morningwalk1.png" alt="Feed Image" />
-              <p class="caption-md">Taken on a morning walk</p>
-            </div>
-            <div class="feed-item">
-              <img src="assets/images/feed/doodle5.JPG" alt="Feed Image" />
-              <p class="caption-md">Sketch</p>
-            </div>
-            <div class="feed-item">
-              <img src="assets/images/feed/acnh.JPG" alt="Feed Image" />
-              <p class="caption-md">I make my own Animal Crossing outfit</p>
-            </div>
-            <div class="feed-item">
-              <img
-                src="assets/images/feed/preludemotion.gif"
-                alt="Feed Image"
-              />
-              <p class="caption-md">Motion Graphic for Prelude</p>
-            </div>
-            <div class="feed-item">
-              <img src="assets/images/feed/doodle1.JPG" alt="Feed Image" />
-              <p>Sketch</p>
-            </div>
-            <div class="feed-item">
-              <img src="assets/images/feed/doodle4.JPG" alt="Feed Image" />
-              <p>Sketch</p>
+            <div class="home-about__btns">
+              <a
+                class="home-txt-btn label-md"
+                href="mailto:mg@mgp.works?subject=Hello%20Min-Gyo&body=Hi%20Min-Gyo,%0D%0A"
+                >E-mail
+              </a>
+              <a
+                class="home-txt-btn label-md"
+                href="https://www.linkedin.com/in/mgpworks"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              >
+              <a
+                class="home-txt-btn label-md"
+                href="https://github.com/mgp-works"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
             </div>
           </div>
         </div>
