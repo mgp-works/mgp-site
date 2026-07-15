@@ -1,63 +1,52 @@
 class SiteHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <header class="site-header page">
-        <div class="col-span-2">
-          <a href="index.html" class="title-md">mgp.works</a>
-        </div>
-
-        <div class="col-span-5">
-          <nav class="nav">
-            <a href="works.html" class="nav-link title-md">works</a>
-            <a href="colorcast.html" class="nav-link title-md">colorcast</a>
-            <a href="about.html" class="nav-link title-md">about</a>
-          </nav>
-        </div>
-
-        <!-- This image acts as menu toggle on mobile -->
-        <div class="logo col-span-1">
-          <img class="logo__img" src="assets/svg/mc-face.svg" alt="logo" width="20">
-        </div>
-      </header>
-
-      <!-- Mobile nav (hidden by default) -->
-      <div class="mobile-nav" id="mobileNav">
-        <button class="close-btn" aria-label="Close menu">✕</button>
-        <a href="works.html" class="nav-link">works</a>
-        <a href="colorcast.html" class="nav-link">colorcast</a>
-        <a href="about.html" class="nav-link">about</a>
+      <div class="nav-group">
+        <a class="nav-cc" href="colorcast.html">
+          <img src="assets/logo/cc-logo.svg" alt="Colorcast" class="cc-logo-img">
+        </a>
+        <div id="mgp-logo-lottie"></div>
       </div>
     `;
 
-    // highlight active nav link
-    const currentPage = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-    this.querySelectorAll('header a[href], .mobile-nav a[href]').forEach(a => {
-      const href = a.getAttribute('href')?.toLowerCase();
-      if (href === currentPage) a.classList.add('active');
+    this.setupAnimations();
+  }
+
+  setupAnimations() {
+    const lottieContainer = this.querySelector('#mgp-logo-lottie');
+    
+    const logoAnimation = lottie.loadAnimation({
+      container: lottieContainer,
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: 'assets/logo/mgp-logo-animation.json'
     });
 
-    const logo = this.querySelector('.logo');
-    const mobileNav = this.querySelector('#mobileNav');
-    const closeBtn = this.querySelector('.close-btn');
-    const mediaQuery = window.matchMedia('(max-width: 720px)');
+    // Hover
+    lottieContainer.addEventListener('mouseenter', () => {
+      logoAnimation.playSegments([10, 60], true);
+      logoAnimation.loop = true;
+    });
 
-    const originalSrc = 'assets/svg/mc-face.svg';
-    const easterEggSrc = 'assets/svg/mc-face-alt.svg';
+    lottieContainer.addEventListener('mouseleave', () => {
+      logoAnimation.loop = false;
+      logoAnimation.stop();
+    });
 
-    function handleLogoClick() {
-      if (mediaQuery.matches) {
-        mobileNav.classList.add('active');
-      } else {
-        logo.src = logo.src.includes('mc-face-alt') ? originalSrc : easterEggSrc;
-      }
-    }
+    // Click
+    lottieContainer.addEventListener('click', (e) => {
+      e.preventDefault();
 
-    function handleCloseClick() {
-      mobileNav.classList.remove('active');
-    }
+      logoAnimation.loop = false; 
+      logoAnimation.stop(); 
 
-    logo.addEventListener('click', handleLogoClick);
-    closeBtn.addEventListener('click', handleCloseClick);
+      logoAnimation.playSegments([0, 6], true);
+
+      setTimeout(() => { 
+        window.location.href = 'index.html'; 
+      }, 500);
+    });
   }
 }
 

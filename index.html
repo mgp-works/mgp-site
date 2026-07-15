@@ -1,29 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Min-Gyo Park - mgp.works</title>
+    <title>MinGyo Park - mgp.works</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap"
     />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-
     <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 
     <script type="module" src="js/components/site-header.js"></script>
     <script type="module" src="js/components/site-footer.js"></script>
@@ -34,129 +33,187 @@
     <site-header></site-header>
 
     <main>
-      <!-------------------- HOME-HERO -------------------->
+      <header class="page">
+        <div class="name-container col-span-4">
+          <img src="assets/mgp-name.svg" alt="MinGyo Park" class="name-img" />
+        </div>
+      </header>
 
-      <section class="hero page">
-        <div class="col-span-2"></div>
-        <h1 class="hero-text col-span-6 headline-md">Test!</h1>
+      <!-------------------- HOME-HERO -------------------->
+      <section class="home-hero page">
+        <img
+          class="hero-image col-span-6"
+          src="assets/flower.png"
+          alt="Flower Image"
+        />
+
+        <div class="hero-text col-span-6">
+          <p class="hero-paragraph headline-sm">
+            Product designer focused on turning user needs into clear, usable
+            solutions. I care about consistency, structure, and visual detail.
+          </p>
+          <div class="hero-btns">
+            <a
+              class="hero-txt-btn"
+              href="mailto:mg@mgp.works?subject=Hello%20Min-Gyo&body=Hi%20Min-Gyo,%0D%0A"
+              >mg@mgp.works</a
+            >
+            <a
+              class="hero-txt-btn"
+              href="https://www.linkedin.com/in/mgpworks"
+              target="_blank"
+              rel="noopener"
+              >linkedin</a
+            >
+            <a
+              class="hero-txt-btn"
+              href="https://github.com/mgp-works"
+              target="_blank"
+              rel="noopener"
+              >github</a
+            >
+          </div>
+        </div>
+
+        <p class="hero-interests col-span-12 headline-lg">
+          User Experience, Design Systems, User Research, User Interface, Brand
+          Identity, User Test, Prototype, Interaction, Lottie
+        </p>
       </section>
 
       <!-------------------- HOME-WORKS -------------------->
-
       <section class="home-works">
-        <div class="home-works__top page">
-          <div class="col-span-2"></div>
-          <div class="home-divider to-right-edge"></div>
-
-          <h2 class="home-works__title col-span-2 headline-md">works</h2>
-
-          <div class="home-works__detail col-span-2">
-            <p class="home-works__txt body-md">
-              a selection of recent projects from product design to branding.
-            </p>
-            <a class="home-txt-btn label-md" href="works.html">view more</a>
-          </div>
+        <div class="home-works__text page">
+          <h2 class="home-works__title col-span-4 headline-lg">Works</h2>
+          <!-- <p class="home-works__detail col-span-8 body-lg">
+            a selection of recent projects from product design to branding.
+          </p> -->
         </div>
 
         <div class="home-works__cards page">
           <project-card
             class="col-span-4"
-            src="assets/images/work-prelude.png"
+            href="prelude.html"
+            src="assets/work-thumb-prelude.png"
             alt="Project Image"
             title="Prelude"
-            type="(UI/UX)"
-            year="2025"
+            type="UI/UX"
+            year="(2025)"
           >
           </project-card>
 
           <project-card
             class="col-span-4"
-            src="assets/images/work-blitz.png"
+            href="blitz.html"
+            src="assets/work-thumb-blitz.png"
             alt="Project Image"
             title="Blitz"
-            type="(UI/UX)"
-            year="2025"
+            type="UI/UX"
+            year="(2025)"
+          >
+          </project-card>
+
+          <project-card
+            class="col-span-4"
+            href="encrebel.html"
+            src="assets/work-thumb-encrebel.png"
+            alt="Project Image"
+            title="Encrebel"
+            type="Brand/Package"
+            year="(2022)"
           >
           </project-card>
         </div>
       </section>
 
       <!-------------------- HOME-COLORCAST -------------------->
+      <section class="home-cc">
+        <div class="home-cc__text page">
+          <h2 class="home-cc__title col-span-6 headline-lg">Colorcast</h2>
 
-      <section class="home-colorcast">
-        <div class="home-colorcast__top page">
-          <div class="col-span-2"></div>
-          <div class="home-divider to-right-edge"></div>
-
-          <h2 class="home-colorcast__title col-span-2 headline-md">
-            colorcast
-          </h2>
-
-          <div class="home-colorcast__detail col-span-2">
-            <p class="home-colorcast__txt body-md">
-              a fun personal project that gives you a fortune and matching color
+          <div class="home-cc__detail col-span-6">
+            <p class="body-md">
+              A fun personal project that gives you a fortune and matching color
               palettes.
+              <a class="try-txt-btn" href="colorcast.html">Try Here</a>
             </p>
-            <a class="home-txt-btn label-md" href="colorcast.html">try now</a>
           </div>
         </div>
 
-        <div class="home-colorcast__imgs page">
-          <img
-            class="home-colorcast__img col-span-4"
-            src="assets/images/home-cc.png"
-            alt="Colorcast Image"
-          />
-          <img
-            class="home-colorcast__img col-span-4"
-            src="assets/images/home-cc-logo.png"
-            alt="Colorcast Image"
-          />
+        <div class="home-cc__imgs page">
+          <a href="colorcast.html" class="col-span-6">
+            <img
+              class="home-cc__img"
+              src="assets/cc-thumb-1.png"
+              alt="Colorcast"
+            />
+          </a>
+          <a href="colorcast.html" class="col-span-6">
+            <img
+              class="home-cc__img"
+              src="assets/cc-thumb-2.png"
+              alt="Colorcast"
+            />
+          </a>
         </div>
       </section>
 
       <!-------------------- HOME-ABOUT -------------------->
-
       <section class="home-about">
-        <div class="home-about__top page">
-          <div class="col-span-2"></div>
-          <div class="home-divider to-right-edge"></div>
-
-          <h2 class="home-about__title col-span-2 headline-md">about</h2>
-
-          <div class="home-about__detail col-span-6">
-            <p class="home-about__txt headline-sm">
-              Product Designer focused on uncovering user needs and turning them
-              into solutions. With a background in branding and a sharp eye for
-              detail, I create systems with a consistent design language that
-              reduce friction and add visual polish.
+        <div class="home-about__text page">
+          <div class="home-about__item col-span-4">
+            <p class="home-about__title body-md">Values</p>
+            <p class="headline-sm">
+              Curiosity, simplicity, consistency, detail, and collaboration.
             </p>
+          </div>
 
-            <div class="home-about__btns">
-              <a
-                class="home-txt-btn label-md"
-                href="mailto:mg@mgp.works?subject=Hello%20Min-Gyo&body=Hi%20Min-Gyo,%0D%0A"
-                >E-mail
-              </a>
-              <a
-                class="home-txt-btn label-md"
-                href="https://www.linkedin.com/in/mgpworks"
-                target="_blank"
-                rel="noopener"
-                >LinkedIn</a
-              >
-              <a
-                class="home-txt-btn label-md"
-                href="https://github.com/mgp-works"
-                target="_blank"
-                rel="noopener"
-                >GitHub</a
-              >
-            </div>
+          <div class="home-about__item col-span-4">
+            <p class="home-about__title body-md">Beyond work</p>
+            <p class="headline-sm">
+              Outside of design, I enjoy looking for cute (but useless) things
+              to buy, browsing Pinterest, and spending time with my two bunnies.
+            </p>
+          </div>
+
+          <div class="home-about__item col-span-4">
+            <p class="home-about__title body-md">Site</p>
+            <p class="headline-sm">
+              Designed in Figma. Built with HTML, CSS, and JavaScript. Deployed
+              on GitHub Pages.
+            </p>
+          </div>
+        </div>
+
+        <div class="home-about__cards page">
+          <div class="home-about__card col-span-4">
+            <img
+              class="home-about__img"
+              src="assets/khamung.png"
+              alt="Khaki and Mungu"
+            />
+            <p class="about-card__caption body-md">Mungu and Khaki.</p>
+          </div>
+
+          <div class="home-about__card col-span-4">
+            <img
+              class="home-about__img"
+              src="assets/blackberry.png"
+              alt="BlackBerry"
+            />
+            <p class="about-card__caption body-md">I collect BlackBerries.</p>
+          </div>
+
+          <div class="home-about__card col-span-4">
+            <img class="home-about__img" src="assets/monet.png" alt="Monet" />
+            <p class="about-card__caption body-md">
+              Monet is my favorite artist.
+            </p>
           </div>
         </div>
       </section>
     </main>
+
     <site-footer></site-footer>
   </body>
 </html>

@@ -22,13 +22,13 @@ class ProjectCard extends HTMLElement {
     const hrefAttr = isClickable ? ` href="${href}"` : '';
 
     this.innerHTML = `
-      <${tag}${hrefAttr} class="project-card${isClickable ? '' : ' project-card--static'}">
-        <div class="project-card__content caption-md">
-          <span class="project-card__title">${title}</span>
-          <span class="project-card__type">${type}</span>
-          <span class="project-card__year">${year}</span>
-        </div>
+    <${tag}${hrefAttr} class="project-card${isClickable ? '' : ' project-card--static'}">
         <img src="${src}" alt="${alt}" class="project-card__image" />
+        <div class="project-card__content body-md">
+          <span class="project-card__title">${title}</span>
+          <span class="project-card__year">${year}</span>
+          <span class="project-card__type">${type}</span>
+        </div>
     </${tag}>
     `;
   }

@@ -2,8 +2,8 @@ class SiteFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <footer class="site-footer">
-            <p class="footer-text caption-md">min-gyo park © 2025 — powered by carbs and curiosity.</p>
-              <img class="footer-img" src="assets/svg/mc-flower.svg" alt="footer image">
+            <p class="footer-text caption">Mingyo Park © 2026 — Powered by carbs and curiosity.</p>
+              <img class="footer-img" src="assets/mc-flower.svg" alt="footer image">
       </footer>
     `;
   }

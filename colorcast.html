@@ -1,30 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Min-Gyo Park - mgp.works</title>
+    <title>MinGyo Park - mgp.works</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="image" href="assets/images/colorcast-bg.png" />
-
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap"
     />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-
     <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 
     <script type="module" src="js/components/site-header.js"></script>
     <script type="module" src="js/components/site-footer.js"></script>
@@ -38,23 +36,23 @@
       <section class="colorcast-hero">
         <div class="container">
           <img
-            src="assets/svg/cc-star-lg.svg"
+            src="assets/logo/cc-logo.svg"
             class="colorcast-star-lg"
             width="40px"
           />
-          <h1 class="colorcast-header display-lg">colorcast</h1>
+          <h1 class="colorcast-header display">Colorcast</h1>
           <h2 class="colorcast-title headline-md">
             The universe has spoken (in hex codes).
           </h2>
           <p class="colorcast-paragraph body-md">
-            Get today’s fortune and a custom palette to match your fate. Like a
-            horoscope, but you can use it in Figma.
+            Get today’s fortune and a custom palette to match your fate. <br />
+            Like a horoscope, but you can use it in Figma.
           </p>
 
           <button id="generate-button" class="colorcast-btn">
-            <img src="assets/svg/emphasize.svg" class="btn-icon-left" />
-            <span>Reveal my fortune</span>
-            <img src="assets/svg/emphasize.svg" class="btn-icon-right" />
+            <img src="assets/emphasize.svg" class="btn-icon-left" />
+            <span class="body-md">Reveal my fortune</span>
+            <img src="assets/emphasize.svg" class="btn-icon-right" />
           </button>
 
           <div id="result" style="display: none">
