@@ -391,6 +391,20 @@ project-card img {
   margin-top: 80px;
 }
 
+.prj-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 12px;
+}
+
+.prj-list li {
+  margin-bottom: 8px;
+}
+
+.prj-list li:last-child {
+  margin-bottom: 0;
+}
+
 /* ========== COLORCAST ========== */
 
 .colorcast-page {
