@@ -12,23 +12,30 @@ document.getElementById("generate-button").addEventListener("click", async () =>
     const res = await fetch("https://colorcast-api.vercel.app/api/generate-colorcast");
     const data = await res.json();
 
-    krText.textContent = data.fortune_kr;
-    enText.textContent = data.fortune_en;
+    if (!res.ok || data.error) {
+      krText.textContent = "오류가 발생했어요.";
+      enText.textContent = "Something went wrong.";
+      colorBox.innerHTML = "";
+    } else {
+      krText.textContent = data.fortune_kr;
+      enText.textContent = data.fortune_en;
 
-    colorBox.innerHTML = "";
-    data.colors.forEach(hex => {
-      const swatch = document.createElement("div");
-      swatch.style.backgroundColor = hex;
-      swatch.className = "swatch";
-      swatch.textContent = hex;
-      colorBox.appendChild(swatch);
-    });
+      colorBox.innerHTML = "";
+      data.colors.forEach(hex => {
+        const swatch = document.createElement("div");
+        swatch.style.backgroundColor = hex;
+        swatch.className = "swatch";
+        swatch.textContent = hex;
+        colorBox.appendChild(swatch);
+      });
+    }
 
     resultBox.style.display = "block";
   } catch (err) {
     krText.textContent = "오류가 발생했어요.";
     enText.textContent = "Something went wrong.";
-  } finally {                                          
+    resultBox.style.display = "block";
+  } finally {
     button.disabled = false;
     button.innerText = "Reveal my fortune";
   }

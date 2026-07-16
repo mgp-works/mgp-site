@@ -30,30 +30,34 @@
   </head>
 
   <body class="colorcast-page">
-    <site-header></site-header>
+    <site-header variant="colorcast"></site-header>
 
     <main>
-      <section class="colorcast-hero">
+      <section class="cc-hero page">
         <div class="container">
           <img
-            src="assets/logo/cc-logo.svg"
-            class="colorcast-star-lg"
+            src="assets/logo/cc-logo-light.svg"
+            class="cc-star-lg"
             width="40px"
           />
-          <h1 class="colorcast-header display">Colorcast</h1>
-          <h2 class="colorcast-title headline-md">
+          <h1 class="cc-header headline-lg">Colorcast</h1>
+          <h2 class="cc-title headline-sm">
             The universe has spoken (in hex codes).
           </h2>
-          <p class="colorcast-paragraph body-md">
-            Get today’s fortune and a custom palette to match your fate. <br />
-            Like a horoscope, but you can use it in Figma.
+          <p class="cc-paragraph body-md">
+            Get today’s fortune and a custom palette to match your fate. Like a
+            horoscope, but you can use it in Figma.
           </p>
 
-          <button id="generate-button" class="colorcast-btn">
-            <img src="assets/emphasize.svg" class="btn-icon-left" />
+          <button id="generate-button" class="cc-btn">
+            <img src="assets/emphasize-icon.svg" class="cc-btn-icon-left" />
             <span class="body-md">Reveal my fortune</span>
-            <img src="assets/emphasize.svg" class="btn-icon-right" />
+            <img src="assets/emphasize-icon.svg" class="cc-btn-icon-right" />
           </button>
+
+          <p class="cc-caption caption">
+            For fun. Use your judgment. Unless it's weirdly accurate.
+          </p>
 
           <div id="result" style="display: none">
             <p id="fortuneKR" class="fortune-kr"></p>
