@@ -23,6 +23,7 @@
     <link rel="icon" href="assets/images/favicon.png" type="image/png" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
     <script type="module" src="js/components/site-header.js"></script>
     <script type="module" src="js/components/site-footer.js"></script>
@@ -30,45 +31,94 @@
   </head>
 
   <body class="colorcast-page">
+    <div class="cc-ambient" aria-hidden="true">
+      <span class="cc-ambient__blob cc-ambient__blob--1"></span>
+      <span class="cc-ambient__blob cc-ambient__blob--2"></span>
+      <span class="cc-ambient__blob cc-ambient__blob--3"></span>
+    </div>
+
     <site-header variant="colorcast"></site-header>
 
     <main>
       <section class="cc-hero page">
         <div class="container">
-          <img
-            src="assets/logo/cc-logo-light.svg"
-            class="cc-star-lg"
-            width="40px"
-          />
-          <h1 class="cc-header headline-lg">Colorcast</h1>
-          <h2 class="cc-title headline-sm">
-            The universe has spoken (in hex codes).
-          </h2>
-          <p class="cc-paragraph body-md">
-            Get today’s fortune and a custom palette to match your fate. Like a
-            horoscope, but you can use it in Figma.
-          </p>
+          <div id="idle">
+            <!-- <img
+              src="assets/logo/cc-logo-light.svg"
+              class="cc-star"
+              width="28px"
+            /> -->
+            <h1 class="cc-header headline-lg">Colorcast</h1>
+            <h2 class="cc-title headline-sm">
+              The universe has spoken (in hex codes).
+            </h2>
+            <p class="cc-paragraph body-md">
+              Get today’s fortune and a matching custom palette. Like a
+              horoscope, but you can use it in Figma.
+            </p>
 
-          <button id="generate-button" class="cc-btn">
-            <img src="assets/emphasize-icon.svg" class="cc-btn-icon-left" />
-            <span class="body-md">Reveal my fortune</span>
-            <img src="assets/emphasize-icon.svg" class="cc-btn-icon-right" />
-          </button>
+            <button id="generate-button" class="cc-btn">
+              <img src="assets/emphasize-icon.svg" class="cc-btn-icon-left" />
+              <span class="body-md">Reveal my Colorcast</span>
+              <img src="assets/emphasize-icon.svg" class="cc-btn-icon-right" />
+            </button>
 
-          <p class="cc-caption caption">
-            For fun. Use your judgment. Unless it's weirdly accurate.
-          </p>
+            <p class="cc-caption caption">
+              For fun. Use your judgment. Unless it's weirdly accurate.
+            </p>
+          </div>
+
+          <div id="loading" style="display: none">
+            <img
+              src="assets/logo/cc-logo-light.svg"
+              class="cc-star-spinner"
+              width="28px"
+            />
+            <p class="cc-title headline-sm">Loading...</p>
+          </div>
 
           <div id="result" style="display: none">
-            <p id="fortuneKR" class="fortune-kr"></p>
-            <p id="fortuneEN" class="fortune-en"></p>
-            <div id="colors" class="color-palette"></div>
+            <div class="cc-result-hero">
+              <!-- <img
+                src="assets/logo/cc-logo-light.svg"
+                class="cc-star"
+                width="28px"
+              /> -->
+              <p class="cc-title headline-sm">Today looks like this.</p>
+            </div>
+
+            <div id="result-card" class="cc-result-card">
+              <div class="cc-result-text">
+                <p id="resultDate" class="cc-result-date caption"></p>
+                <p class="cc-result-label body-md">Today's Colorcast</p>
+                <img
+                  src="assets/logo/cc-logo-light.svg"
+                  class="cc-star"
+                  width="12px"
+                />
+                <p id="fortuneEN" class="cc-result-fortune body-lg"></p>
+              </div>
+              <div id="colors" class="cc-colors"></div>
+            </div>
+
+            <div class="cc-result-actions">
+              <button id="save-png-button" class="cc-btn">
+                <img src="assets/download-icon.svg" class="cc-btn-icon-left" />
+                <span class="body-md">Save as PNG</span>
+              </button>
+
+              <p class="cc-followup caption">
+                ...or
+                <a href="#" id="try-again-link" class="cc-link">try again</a>
+                one last time
+              </p>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
     <site-footer></site-footer>
-    <script src="js/colorcast.js"></script>
+    <script src="js/colorcast.js?v=20260717"></script>
   </body>
 </html>

@@ -1,16 +1,15 @@
 class SiteHeader extends HTMLElement {
   connectedCallback() {
     const isColorcast = this.getAttribute('variant') === 'colorcast';
-
-    const leftContent = isColorcast
-      ? `<img src="assets/logo/mgp-name-light.svg" alt="MinGyo Park" class="header-name-img">`
-      : `<a class="nav-cc" href="colorcast.html">
-          <img src="assets/logo/cc-logo.svg" alt="Colorcast" class="cc-logo-img">
-        </a>`;
+    const logoSrc = isColorcast
+      ? 'assets/logo/cc-logo-light.svg'
+      : 'assets/logo/cc-logo.svg';
 
     this.innerHTML = `
       <div class="nav-group">
-        ${leftContent}
+        <a class="cc-nav" href="colorcast.html">
+          <img src="${logoSrc}" alt="Colorcast" class="cc-nav-btn">
+        </a>
         <div id="mgp-logo-lottie"></div>
       </div>
     `;
