@@ -17,26 +17,50 @@ function formatToday() {
   });
 }
 
-document.getElementById("generate-button").addEventListener("click", async () => {
-  const idleBox = document.getElementById("idle");
-  const loadingBox = document.getElementById("loading");
-  const resultBox = document.getElementById("result");
+const DAILY_LIMIT = 2;
+const GENERATIONS_KEY = "colorcastGenerations";
+
+function getGenerationCount() {
+  const stored = JSON.parse(localStorage.getItem(GENERATIONS_KEY) || "null");
+  if (!stored || stored.date !== new Date().toDateString()) return 0;
+  return stored.count;
+}
+
+function incrementGenerationCount() {
+  const count = getGenerationCount() + 1;
+  localStorage.setItem(
+    GENERATIONS_KEY,
+    JSON.stringify({ count, date: new Date().toDateString() })
+  );
+  return count;
+}
+
+function showSection(id) {
+  ["idle", "loading", "result", "limit-reached"].forEach(sectionId => {
+    document.getElementById(sectionId).style.display = sectionId === id ? "block" : "none";
+  });
+}
+
+async function handleGenerate() {
+  if (getGenerationCount() >= DAILY_LIMIT) {
+    showSection("limit-reached");
+    return;
+  }
+
   const heroText = document.querySelector("#result .cc-title");
   const resultCard = document.getElementById("result-card");
   const resultActions = document.querySelector(".cc-result-actions");
   const dateText = document.getElementById("resultDate");
   const enText = document.getElementById("fortuneEN");
   const colorBox = document.getElementById("colors");
+  const tryAgainFollowup = document.getElementById("try-again-followup");
+  const goHomeButton = document.getElementById("go-home-button");
 
-  idleBox.style.display = "none";
-  resultBox.style.display = "none";
-  loadingBox.style.display = "block";
+  showSection("loading");
 
   try {
     const res = await fetch("https://colorcast-api.vercel.app/api/generate-colorcast");
     const data = await res.json();
-
-    loadingBox.style.display = "none";
 
     if (!res.ok || data.error) {
       heroText.textContent = "Something went wrong.";
@@ -59,17 +83,30 @@ document.getElementById("generate-button").addEventListener("click", async () =>
         swatch.textContent = hex;
         colorBox.appendChild(swatch);
       });
+
+      const reachedLimit = incrementGenerationCount() >= DAILY_LIMIT;
+      tryAgainFollowup.style.display = reachedLimit ? "none" : "block";
+      goHomeButton.style.display = reachedLimit ? "inline-flex" : "none";
     }
 
-    resultBox.style.display = "block";
+    showSection("result");
   } catch (err) {
-    loadingBox.style.display = "none";
     heroText.textContent = "Something went wrong.";
     resultCard.style.display = "none";
     resultActions.style.display = "none";
-    resultBox.style.display = "block";
+    showSection("result");
   }
+}
+
+document.getElementById("generate-button").addEventListener("click", handleGenerate);
+
+document.getElementById("try-again-link").addEventListener("click", (e) => {
+  e.preventDefault();
+  handleGenerate();
 });
+
+document.getElementById("go-home-button").addEventListener("click", () => showSection("idle"));
+document.getElementById("go-back-button").addEventListener("click", () => showSection("idle"));
 
 document.getElementById("save-png-button").addEventListener("click", async () => {
   const card = document.getElementById("result-card");

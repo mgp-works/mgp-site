@@ -476,13 +476,6 @@ project-card img {
   /* margin-top: 160px; */
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
 /* ========== CC-IDLE ========== */
 
 .cc-header {
