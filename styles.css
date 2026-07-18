@@ -130,6 +130,8 @@ body {
 
 main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ========== LAYOUT ========== */
@@ -364,6 +366,7 @@ project-card img {
 
 .home-about {
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .home-about__title {
@@ -471,14 +474,15 @@ project-card img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100dvh;
   text-align: center;
-  /* margin-top: 160px; */
+  margin: 40px 0;
+  min-height: calc(100dvh - 40px);
 }
 
 /* ========== CC-IDLE ========== */
 
 .cc-header {
+  margin-bottom: 20px;
   color: var(--gray-0);
 }
 
@@ -542,7 +546,6 @@ project-card img {
 }
 
 /* ========== CC-RESULT ========== */
-
 
 .cc-result-hero {
   display: flex;
@@ -657,7 +660,7 @@ project-card img {
   justify-content: space-between;
   align-items: flex-end;
   gap: 40px;
-  padding-top: 120px;
+  /* padding-top: 120px; */
   padding-bottom: 20px;
   padding-inline: 20px;
 }
