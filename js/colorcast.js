@@ -17,6 +17,24 @@ function formatToday() {
   });
 }
 
+function createAmbientStars(count = 15) {
+  const ambient = document.querySelector(".cc-ambient");
+  if (!ambient) return;
+
+  for (let i = 0; i < count; i++) {
+    const star = document.createElement("span");
+    star.className = "cc-star-particle";
+    star.style.top = `${Math.random() * 100}%`;
+    star.style.left = `${Math.random() * 100}%`;
+    star.style.animationDelay = `${Math.random() * 6}s`;
+    star.style.animationDuration = `${3 + Math.random() * 3}s`;
+    star.style.width = star.style.height = Math.random() < 0.5 ? "2px" : "4px";
+    ambient.appendChild(star);
+  }
+}
+
+createAmbientStars();
+
 const DAILY_LIMIT = 2;
 const GENERATIONS_KEY = "colorcastGenerations";
 

@@ -494,6 +494,23 @@ project-card img {
   50% { opacity: 0.2; }
 }
 
+.cc-star-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: var(--gray-0);
+  border-radius: 50%;
+  opacity: 0;
+  animation-name: cc-star-twinkle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cc-star-twinkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.8; }
+}
+
 .colorcast-page .footer-text {
   color: var(--gray-300);
 }
