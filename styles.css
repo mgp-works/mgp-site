@@ -415,6 +415,30 @@ project-card img {
   margin-bottom: 0;
 }
 
+.project-nav {
+  display: flex;
+  margin: 80px 0;
+}
+
+.project-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-nav__link:hover {
+  text-decoration: none;
+}
+
+.project-nav__link:hover span {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.project-nav__link--next {
+  margin-left: auto;
+}
+
 /* ========== COLORCAST ========== */
 
 .colorcast-page {
