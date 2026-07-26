@@ -401,6 +401,10 @@ project-card img {
   margin-top: 80px;
 }
 
+.text-paragraph {
+  margin-top: 8px;
+}
+
 .prj-list {
   list-style: disc;
   padding-left: 20px;
