@@ -20,7 +20,7 @@
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+    <link rel="icon" href="assets/logo/favicon.png" type="image/png" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -42,29 +42,24 @@
     <main>
       <section class="cc-hero page">
         <div id="idle">
-          <!-- <img
-            src="assets/logo/cc-logo-light.svg"
-            class="cc-star"
-            width="28px"
-          /> -->
-          <h1 class="cc-header headline-lg">Colorcast</h1>
+          <h1 class="cc-header display">Colorcast</h1>
           <h2 class="cc-title headline-sm">
             The universe has spoken (in hex codes).
           </h2>
           <p class="cc-paragraph body-md">
-            Get today’s fortune and a matching custom palette. Like a horoscope,
+            Get today's fortune with a matching color palette. Like a horoscope,
             but you can use it in Figma.
           </p>
 
           <button id="generate-button" class="cc-btn">
             <img src="assets/emphasize-icon.svg" class="cc-btn-icon-left" />
-            <span class="body-md">Reveal my Colorcast</span>
+            <span class="body-md">Reveal</span>
             <img src="assets/emphasize-icon.svg" class="cc-btn-icon-right" />
           </button>
 
-          <!-- <p class="cc-caption caption">
-            For fun. Use your judgment. Unless it's weirdly accurate.
-          </p> -->
+          <p class="cc-caption caption">
+            Just for fun. Unless it's weirdly accurate.
+          </p>
         </div>
 
         <div id="loading" style="display: none">
@@ -73,17 +68,12 @@
             class="cc-star-spinner"
             width="28px"
           />
-          <p class="cc-title headline-sm">Loading...</p>
+          <p class="cc-title headline-sm">Reading the stars...</p>
         </div>
 
         <div id="result" style="display: none">
           <div class="cc-result-hero">
-            <!-- <img
-              src="assets/logo/cc-logo-light.svg"
-              class="cc-star"
-              width="28px"
-            /> -->
-            <p class="cc-title headline-sm">Today looks like this.</p>
+            <p class="cc-title headline-sm">Here's your reading.</p>
           </div>
 
           <div id="result-card" class="cc-result-card">
@@ -103,26 +93,28 @@
           <div class="cc-result-actions">
             <button id="save-png-button" class="cc-btn">
               <img src="assets/download-icon.svg" class="cc-btn-icon-left" />
-              <span class="body-md">Save as PNG</span>
+              <span class="body-md">Download PNG</span>
             </button>
 
             <p id="try-again-followup" class="cc-followup caption">
-              ...or
-              <a href="#" id="try-again-link" class="cc-link">try again</a>
-              one last time
+              Not feeling it?
+              <a href="#" id="try-again-link" class="cc-link">Try again.</a>
             </p>
 
             <button id="go-home-button" class="cc-btn" style="display: none">
-              <span class="body-md">Go home</span>
+              <span class="body-md">Go back</span>
             </button>
           </div>
         </div>
 
         <div id="limit-reached" style="display: none">
-          <p class="cc-title headline-sm">That's all the universe has today.</p>
+          <p class="cc-title headline-sm">
+            That's all the universe has for today.
+          </p>
           <p class="cc-paragraph body-md">Come back tomorrow.</p>
 
           <button id="go-back-button" class="cc-btn">
+            <img src="assets/arrow-left-icon.svg" class="cc-btn-icon-left" />
             <span class="body-md">Go back</span>
           </button>
         </div>
