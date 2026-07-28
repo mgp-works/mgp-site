@@ -540,7 +540,7 @@ project-card img {
 /* ========== CC-IDLE ========== */
 
 .cc-header {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   color: var(--gray-0);
 }
 
@@ -561,7 +561,7 @@ project-card img {
   align-items: center;
   gap: 8px;
 
-  margin-top: 28px;
+  margin-top: 40px;
   padding: 8px 12px;
   border-radius: 2px;
   border: none;
