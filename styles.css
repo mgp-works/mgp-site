@@ -676,6 +676,12 @@ project-card img {
   margin-top: 40px;
 }
 
+.cc-result-actions__row {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
 .cc-followup {
   color: var(--gray-400);
   text-align: center;
