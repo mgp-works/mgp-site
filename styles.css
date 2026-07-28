@@ -316,22 +316,32 @@ project-card img {
   gap: 4px;
 }
 
+.project-card__title {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .project-card__year {
   opacity: 0;
   max-width: 0;
   overflow: hidden;
   white-space: nowrap;
+  flex-shrink: 0;
   transition: opacity 0.2s, max-width 0.2s;
 }
 
 .project-card:hover .project-card__year {
   opacity: 1;
-  max-width: 100px;
+  max-width: 120px;
 }
 
 .project-card__type {
   color: var(--gray-400);
   transition: transform .2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 /* ========== HOME-COLORCAST ========== */
@@ -390,6 +400,7 @@ project-card img {
 
 /* ========== PROJECT ========== */
 .project-title {
+  grid-column: 1 / -1;
   margin-top: 60px;
 }
 
