@@ -51,288 +51,72 @@
 
       <section class="project-text">
         <div class="prj-text-group page reveal">
-          <h2 class="text-title col-span-4 headline-lg">Project overview</h2>
+          <h2 class="text-title col-span-4 headline-lg">Overview</h2>
           <div class="text-paragraph col-span-8">
             <p class="body-lg">
-              Prelude is a mobile app that analyzes a photo of a meal using AI
-              and cross-references it against trusted health sources to flag
-              ingredients pregnant users should be cautious about, based on
-              their individual health profile. For the app's first post-launch
-              update, I led a redesign of the result screen — the core
-              touchpoint where users see whether their meal is safe — to help
-              users understand the outcome faster and trust it more.
-            </p>
-            <div
-              style="
-                background-color: var(--gray-100);
-                min-height: 200px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 16px;
-                box-sizing: border-box;
-                text-align: center;
-                margin-top: 16px;
-              "
-            >
-              <span class="caption" style="color: var(--gray-400)"
-                >Result screen mockup ("안전 보고서" / safety report UI) in
-                phone frame — source PDF p.2</span
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="prj-text-group page reveal">
-          <h2 class="text-title col-span-4 headline-lg">Context and problem</h2>
-          <div class="text-paragraph col-span-8">
-            <p class="body-lg">
-              The original result screen presented ingredient-level safety
-              information as a flat list of nutrients alongside raw source URLs.
-              Users had no fast way to tell whether a meal was overall safe, and
-              the sourcing looked unverified, which undermined trust in the
-              recommendation.
-            </p>
-            <div
-              style="
-                background-color: var(--gray-100);
-                min-height: 200px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 16px;
-                box-sizing: border-box;
-                text-align: center;
-                margin-top: 16px;
-              "
-            >
-              <span class="caption" style="color: var(--gray-400)"
-                >AS-IS result screen — flat nutrient list + raw URLs — source
-                PDF p.4 (AS-IS)</span
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="prj-text-group page reveal">
-          <h2 class="text-title col-span-4 headline-lg">
-            My role and responsibilities
-          </h2>
-          <div class="text-paragraph col-span-8">
-            <p class="body-lg">
-              I was the sole designer on a two-person team (with one iOS
-              developer), owning UX research, information architecture, UX
-              writing, and UI design for the redesign. I contributed 50% to
-              planning and 100% to design.
+              Prelude analyzes a meal photo with AI and flags ingredients
+              pregnant users should watch for, using trusted health sources and
+              their own health profile.
             </p>
           </div>
         </div>
 
         <div class="prj-text-group page reveal">
-          <h2 class="text-title col-span-4 headline-lg">
-            Research and key insights
-          </h2>
+          <h2 class="text-title col-span-4 headline-lg">Problem</h2>
           <div class="text-paragraph col-span-8">
             <p class="body-lg">
-              To validate the redesign direction, I ran an 11-day online survey
-              with 26 pregnant users (61% in their first trimester, 84%
-              first-time pregnancies), recruited through pregnancy and parenting
-              communities. Three findings shaped the redesign:
+              The original result screen listed nutrients and raw source URLs.
+              Users couldn't quickly tell if a meal was safe, and the sourcing
+              looked unverified, which undermined trust.
             </p>
+          </div>
+        </div>
+
+        <div class="prj-text-group page reveal">
+          <h2 class="text-title col-span-4 headline-lg">Research</h2>
+          <div class="text-paragraph col-span-8">
+            <p class="body-lg">
+              A user survey showed three things: users default to avoiding any
+              risk, however small; they cared more about health impact than
+              nutrient values; and unclear sourcing made them distrust the
+              answer.
+            </p>
+          </div>
+        </div>
+
+        <div class="prj-text-group page reveal">
+          <h2 class="text-title col-span-4 headline-lg">Solution</h2>
+          <div class="text-paragraph col-span-8">
             <ul class="prj-list body-lg">
               <li>
-                Users default to avoiding any food with even a small chance of
-                risk (50% picked the most risk-averse response option), so the
-                screen needed to surface the safety verdict before any detail.
+                Made the danger/caution/safe summary at the top of the screen
+                easier to read at a glance by adding a visual chart.
               </li>
               <li>
-                Users cared more about how a food affects their and their baby's
-                health than about raw nutrient values (88.5% wanted to know
-                health impact rather than nutrient content).
+                Replaced raw URLs with named institutions (e.g., "World Health
+                Organization (who.int)").
               </li>
               <li>
-                Sourcing felt unreliable: 76.9% said available information
-                wasn't detailed enough, and 53.8% found conflicting information
-                across sources confusing.
+                Rewrote the copy to lead with health impact in a calm,
+                reassuring tone rather than alarmist language.
               </li>
             </ul>
-            <p class="body-lg" style="margin-top: 16px">
-              These findings set two redesign objectives: restructure
-              information so the safety verdict is immediately clear, and change
-              how sources are presented so users trust the answer.
-            </p>
-            <div
-              style="
-                background-color: var(--gray-100);
-                min-height: 200px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 16px;
-                box-sizing: border-box;
-                text-align: center;
-                margin-top: 16px;
-              "
-            >
-              <span class="caption" style="color: var(--gray-400)"
-                >Survey response charts (risk-avoidance %, info-source confusion
-                %) — source PDF p.3</span
-              >
-            </div>
           </div>
         </div>
 
         <div class="prj-text-group page reveal">
-          <h2 class="text-title col-span-4 headline-lg">Design process</h2>
-          <div class="text-paragraph col-span-8">
-            <h3 class="headline-sm">Information structure</h3>
-            <p class="body-lg" style="margin-top: 8px">
-              I reordered the result screen so a danger/caution/safe summary
-              sits at the top, with detailed ingredient information below sorted
-              danger → caution → safe — matching how users scan for the verdict
-              first.
-            </p>
-            <div
-              style="
-                background-color: var(--gray-100);
-                min-height: 200px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 16px;
-                box-sizing: border-box;
-                text-align: center;
-                margin-top: 16px;
-              "
-            >
-              <span class="caption" style="color: var(--gray-400)"
-                >AS-IS vs. TO-BE result screen comparison (summary block added)
-                — source PDF p.4–5</span
-              >
-            </div>
-
-            <h3 class="headline-sm" style="margin-top: 32px">
-              Source presentation
-            </h3>
-            <p class="body-lg" style="margin-top: 8px">
-              I replaced bare source URLs with the issuing institution's name
-              (e.g., "World Health Organization (who.int)") linked to the
-              original page, so users can judge credibility at a glance instead
-              of parsing a URL.
-            </p>
-            <div
-              style="
-                background-color: var(--gray-100);
-                min-height: 200px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 16px;
-                box-sizing: border-box;
-                text-align: center;
-                margin-top: 16px;
-              "
-            >
-              <span class="caption" style="color: var(--gray-400)"
-                >AS-IS URL list vs. TO-BE institution-name citation — source PDF
-                p.5</span
-              >
-            </div>
-
-            <h3 class="headline-sm" style="margin-top: 32px">Content tone</h3>
-            <p class="body-lg" style="margin-top: 8px">
-              Since users cared about health impact over nutrient counts, I
-              rewrote result copy to lead with the effect on maternal/fetal
-              health rather than listing values. I also put together a UX
-              writing guideline (documented in Notion, with AI assistance in
-              compiling writing examples and reviewing tone) to keep language
-              calm and reassuring — stating necessary cautions clearly without
-              alarmist phrasing, and pairing warnings with a concrete
-              alternative where possible.
-            </p>
-            <div
-              style="
-                background-color: var(--gray-100);
-                min-height: 200px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 16px;
-                box-sizing: border-box;
-                text-align: center;
-                margin-top: 16px;
-              "
-            >
-              <span class="caption" style="color: var(--gray-400)"
-                >AS-IS vs. TO-BE writing comparison (nutrient list →
-                health-impact copy) — source PDF p.6</span
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="prj-text-group page reveal">
-          <h2 class="text-title col-span-4 headline-lg">Final solution</h2>
+          <h2 class="text-title col-span-4 headline-lg">
+            Loading time improvement
+          </h2>
           <div class="text-paragraph col-span-8">
             <p class="body-lg">
-              The shipped result screen leads with a summary of
-              danger/caution/safe counts, followed by ingredient-level detail
-              ordered by risk, source citations shown as named institutions, and
-              copy that explains health impact in a reassuring tone. Working
-              with the iOS developer, I also helped scope a food-selection step:
-              instead of the AI committing to a single (sometimes incorrect)
-              food match after a long analysis, the app now shows the top 3
-              visual matches for the user to confirm before running the full
-              analysis. The underlying analysis method and prompts were
-              optimized during development.
+              Separately, I designed a fix for a related problem: the AI's food
+              recognition took over two minutes and gave users no way to correct
+              a wrong match. I proposed a selection step that shows the top 3
+              visual matches before running the full analysis, so users could
+              confirm the right food first — expected to cut the wait down to
+              just a few seconds.
             </p>
-            <div
-              style="
-                background-color: var(--gray-100);
-                min-height: 200px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 16px;
-                box-sizing: border-box;
-                text-align: center;
-                margin-top: 16px;
-              "
-            >
-              <span class="caption" style="color: var(--gray-400)"
-                >Old flow (single-shot recognition) vs. new flow (top-3
-                selection step) diagram — source PDF p.7</span
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="prj-text-group page reveal">
-          <h2 class="text-title col-span-4 headline-lg">Results</h2>
-          <div class="text-paragraph col-span-8">
-            <p class="body-lg">
-              The added selection step, combined with analysis optimization, cut
-              result loading time from 120 seconds to 10 seconds — a 92%
-              reduction.
-            </p>
-            <div
-              style="
-                background-color: var(--gray-100);
-                min-height: 200px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 16px;
-                box-sizing: border-box;
-                text-align: center;
-                margin-top: 16px;
-              "
-            >
-              <span class="caption" style="color: var(--gray-400)"
-                >Loading-time callout (120s → 10s, -92%) paired with the
-                selection-step screens — source PDF p.7</span
-              >
-            </div>
           </div>
         </div>
       </section>
