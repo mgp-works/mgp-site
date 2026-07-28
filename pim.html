@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MinGyo Park - mgp.works</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/logo/favicon.png" type="image/png" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+    <script type="module" src="js/components/site-header.js"></script>
+    <script type="module" src="js/components/site-footer.js"></script>
+    <script type="module" src="js/components/project-card.js"></script>
+    <script type="module" src="js/components/project-nav.js"></script>
+    <script type="module" src="js/reveal.js"></script>
+  </head>
+
+  <body>
+    <site-header></site-header>
+
+    <main>
+      <header class="page">
+        <div class="project-title">
+          <h1 class="display">Pim</h1>
+        </div>
+      </header>
+
+      <div class="project-banner .full-bleed reveal">
+        <img
+          class="project-banner__img col-span-12"
+          src="assets/pim-banner.png"
+          alt="Pim"
+        />
+      </div>
+
+      <section class="project-text">
+        <div class="prj-text-group page reveal">
+          <h2 class="text-title col-span-4 headline-lg">Problem</h2>
+          <div class="text-paragraph col-span-8">
+            <p class="body-lg">
+              Pim added a core feature that auto-calculates medication and
+              rest-cycle days by pill type, based on user feedback. As
+              screens and components grew, the app's basic color-inversion
+              approach for dark mode couldn't keep up—it didn't account for
+              background/component hierarchy, causing readability issues
+              and layout distortion. This led to undefined "exception"
+              colors piling up in code, one-off manual design fixes, and
+              repeated back-and-forth with engineers over unclear dark-mode
+              behavior.
+            </p>
+          </div>
+        </div>
+
+        <div class="prj-text-group page reveal">
+          <h2 class="text-title col-span-4 headline-lg">Solution</h2>
+          <div class="text-paragraph col-span-8">
+            <p class="body-lg">
+              I built a Semantic Color System based on UI role rather than
+              raw values:
+            </p>
+            <ul class="prj-list body-lg">
+              <li>
+                Separated Primitive tokens (raw color scale) from Semantic
+                tokens (named by role, e.g. <code>bg.item.surface</code>,
+                mapped to the right value per light/dark mode)
+              </li>
+              <li>
+                Defined a <code>property + target + role</code> naming
+                convention so new tokens stay predictable as the system
+                scales
+              </li>
+              <li>
+                Replaced what would've required dozens of individual
+                interaction-state colors with 3 reusable overlay tokens
+                (<code>bg.action</code>)
+              </li>
+              <li>
+                Audited all color pairs against WCAG AA and fixed
+                failures—e.g., CTA button contrast improved from 3.79:1
+                (fail) to 4.54:1 (pass)
+              </li>
+              <li>
+                Documented the full token system and usage rationale in a
+                Figma guideline for engineers
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="prj-text-group page reveal">
+          <h2 class="text-title col-span-4 headline-lg">Result</h2>
+          <div class="text-paragraph col-span-8">
+            <ul class="prj-list body-lg">
+              <li>
+                Light/dark mode now switches automatically with no manual
+                color assignment
+              </li>
+              <li>
+                All temporary exception colors and inversion logic were
+                removed, closing the design-code gap and creating a
+                structure that can absorb future features without
+                repeating the same scaling issues
+              </li>
+              <li>
+                All foreground/text elements now meet WCAG AA contrast
+                (4.5:1+)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <project-nav next-href="blitz.html" next-title="Next"></project-nav>
+
+    <site-footer></site-footer>
+  </body>
+</html>

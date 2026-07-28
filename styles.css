@@ -266,7 +266,8 @@ site-header {
 
 .hero-image {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   display: block;
 }
 
@@ -296,7 +297,7 @@ site-header {
 /* ========== HOME-WORKS ========== */
 
 .home-works {
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .home-works__cards {
