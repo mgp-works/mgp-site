@@ -2,12 +2,12 @@ class SiteHeader extends HTMLElement {
   connectedCallback() {
     const isColorcast = this.getAttribute('variant') === 'colorcast';
     const logoSrc = isColorcast
-      ? 'assets/logo/cc-logo-light.svg'
-      : 'assets/logo/cc-logo.svg';
+      ? '/assets/logo/cc-logo-light.svg'
+      : '/assets/logo/cc-logo.svg';
 
     this.innerHTML = `
       <div class="nav-group">
-        <a class="cc-nav" href="colorcast.html">
+        <a class="cc-nav" href="/colorcast.html">
           <img src="${logoSrc}" alt="Colorcast" class="cc-nav-btn">
         </a>
         <div id="mgp-logo-lottie"></div>
@@ -25,7 +25,7 @@ class SiteHeader extends HTMLElement {
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: 'assets/logo/mgp-logo-animation.json'
+      path: '/assets/logo/mgp-logo-animation.json'
     });
 
     // Hover
@@ -49,7 +49,7 @@ class SiteHeader extends HTMLElement {
       logoAnimation.playSegments([0, 6], true);
 
       setTimeout(() => { 
-        window.location.href = 'index.html'; 
+        window.location.href = '/';
       }, 500);
     });
   }

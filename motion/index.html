@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>MinGyo Park - mgp.works</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/assets/logo/favicon.png" type="image/png" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+    <script type="module" src="/js/components/site-header.js"></script>
+    <script type="module" src="/js/components/site-footer.js"></script>
+  </head>
+
+  <body>
+    <site-header></site-header>
+
+    <main>
+      <section class="motion-hero page">
+        <h2 class="col-span-12 headline-lg">Motion Works</h2>
+
+        <div class="motion-group col-span-6">
+          <h3 class="motion-subtitle col-span-6 headline-sm">Pim</h3>
+          <div class="motion-lottie col-span-3" id="motion-pim-hello"></div>
+          <div class="motion-lottie col-span-3" id="motion-pim-newsbadge"></div>
+          <p class="motion-lottie-caption col-span-3 caption">
+            온보딩 캐릭터 모션
+          </p>
+          <p class="motion-lottie-caption col-span-3 caption">
+            새 소식 알림 모션
+          </p>
+        </div>
+
+        <div class="motion-group col-span-6">
+          <h3 class="motion-subtitle col-span-6 headline-sm">Prelude</h3>
+          <div
+            class="motion-lottie col-span-3"
+            id="motion-prelude-splash"
+          ></div>
+          <div
+            class="motion-lottie col-span-3"
+            id="motion-prelude-loading"
+          ></div>
+          <p class="motion-lottie-caption col-span-3 caption">
+            앱 진입 시 로고 모션
+          </p>
+          <p class="motion-lottie-caption col-span-3 caption">
+            데이터 분석 대기 중 로딩 모션
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <site-footer></site-footer>
+    <script src="/js/motion.js"></script>
+  </body>
+</html>
